@@ -789,6 +789,7 @@ img {
   position: relative;
   top: 50%;
   left: 50%;
+  padding: 40px;
 
   width: 528px;
   height: 581px;
@@ -850,6 +851,11 @@ textarea {
   color: #ffffff;
 }
 
+.subscribe-form-fild input:focus-within {
+  outline: none;
+  border: 1px solid var(--acent-color);
+}
+
 .footer-form-button {
   padding-left: 28px;
   margin-left: 12px;
@@ -884,18 +890,20 @@ textarea {
 }
 
 .order-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-
  
-  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .order-form-titel {
-  margin: 0 0 12px 0;
-
+  margin-top: 0px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
@@ -903,19 +911,32 @@ textarea {
   color: var(--primary-text-color);
 }
 
+.order-form-input {
+  width: 100%;
+}
+
 .form-field {
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
+}
+
+.form-field.comment {
+  margin-bottom: 20px;
+}
+
+.form-field:last-child {
+  margin-bottom: 20px;
 }
 
 .form-field input {
   margin: 0;
-  padding: 12px 42px;
+  padding: 12px 0px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  height: 40px;
 
   font-size: 16px;
   line-height: 1.2;
@@ -938,16 +959,18 @@ textarea {
 .form-field:focus-within > .order-form-input {
   border: 1px solid var(--acent-color);
   border-color: var(--acent-color);
+  outline: none;
 }
 
 .form-field:focus-within > .form-icon {
   fill: var(--acent-color);
+  
 }
 
 .form-icon {
   position: absolute;
   left: 15px;
-  top: 32px;
+  top: 30px;
   display: inline-block;
 }
 
@@ -971,16 +994,18 @@ textarea {
 }
 
 .modal-window-input {
-  margin: 0;
+ margin: 0;
+ 
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  height: 120px;
 
   font-size: 16px;
   line-height: 1.2;
 }
 
-.modal-window-input input::placeholder {
+.modal-window-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
@@ -991,6 +1016,7 @@ textarea {
 
 .form-field:focus-within > .modal-window-input {
   border: 1px solid var(--acent-color);
+  outline: none;
 }
 
 .form-field input[type='checkbox'] {
@@ -1008,7 +1034,7 @@ textarea {
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px;
+  margin:-1px;
 }
 
 .checkbox-label {
@@ -1040,7 +1066,7 @@ textarea {
 
 .text-policy,
 .policy-link {
-  margin: 0;
+  margin-top: 0px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1065,6 +1091,7 @@ textarea {
 
 .order-form-button {
   margin-top: 30px;
+  margin-bottom: 0;
   min-width: 200px;
   height: 50px;
   color: white;
